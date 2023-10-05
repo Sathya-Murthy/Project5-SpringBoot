@@ -1,0 +1,58 @@
+Docker
+
+
+1) ./gradlew build : used to build jar file
+
+2) java -jar spring-back.jar ==> java -jar spring-back.jar
+
+
+---------------------------SpringBack--------------------------------------------
+
+3) docker build -t springback-image:1.0 -f Dockerfiles/Dockerfile.springback .
+
+4) docker image tag springback-image:1.0 sathyamurthyr/springback-image:1.0
+
+5) docker push sathyamurthyr/springback-image:1.0
+
+-------------------------SpringFront------------------------------------------
+
+6) docker build -t springfront-image:1.0 -f Dockerfiles/Dockerfile.springfront .
+
+7) docker image tag springfront-image:1.0 sathyamurthyr/springfront-image:1.0
+
+8) docker push sathyamurthyr/springfront-image:1.0
+
+
+Draft_GJ005S/2023/3930461
+
+
+-------------Datadog-agent-Image build-----------------------
+1)java -jar dd-java-agent.jar
+2) docker build -t dd-java-agent .
+3) docker image tag dd-java-agent sathyamurthyr/dd-java-agent:1.0
+4) docker image push sathyamurthyr/dd-java-agent:1.0
+
+
+
+
+------------------------AWS UBUNTU PROJECT INSTANCES-------------------------------
+1) sudo apt update
+2) sudo apt install docker.io
+3) DD_API_KEY=63fb02a9319efd1df1bb76f91f35f36c DD_SITE="datadoghq.com" DD_APM_INSTRUMENTATION_ENABLED=host bash -c "$(curl -L https://s3.amazonaws.com/dd-agent/scripts/install_script_agent7.sh)"
+4) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
